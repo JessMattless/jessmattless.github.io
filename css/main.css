@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
+
+:root {
+    --headerFont: 'Nunito', sans-serif;
+    --bodyFont: 'Montserrat', sans-serif;
+    --textColor: #eee;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(0, 9, 92), 5%, rgb(0, 0, 0), 95%,  rgb(55, 0, 92));
+    background-repeat: no-repeat;
+    height: 300vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, li {
+    font-family: var(--headerFont);
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav, nav ul {
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 10% 15% 15% 15% 15% 15% 15%;
+    list-style: none;
+    grid-template-areas: "name name . section1 section2 section3 section4";
+}
+
+nav li {
+    width: 100%;
+    justify-self: flex-end;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--textColor);
+    text-decoration: none;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    transition-duration: 0.2s;
+}
+
+nav a:hover { background:rgba(0, 0, 0, 0.3); }
+nav h2 a:hover { background:rgba(0, 0, 0, 0.0); }
+
+nav h2 {
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4.5em;
+    color: var(--textColor);
+    text-align: center;
+}
