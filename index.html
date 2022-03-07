@@ -5,31 +5,43 @@
         <title>Jake Mattless</title>
         <link rel='stylesheet' href='css/main.css' />
     <head>
-    <body>
+    <body style="overflow: hidden;">
         <header>
             <ul class='links'>
-                <li class='headerImg'><img width='60px' src='./img/Logo.png'></li>
+                <li class='headerImg'><img id='logo' alt="The logo of the website" width='60px' src='./img/Logo.png'></li>
                 <ul>
                         <nav>
-                            <li class='link'><a href='#'>Link 1</a></li>
-                            <li class='link'><a href='#'>Link 2</a></li>
-                            <li class='link'><a href='#'>Link 3</a></li>
-                            <li class='link'><a href='#'>Link 4</a></li>
+                            <li class='link'>
+                                <a class='active' href='#'>Who Am I?</a>
+                            </li>
+                            <li class='link'>
+                                <a class="pageLink" href='./projects.html'>Projects</a>
+                            </li>
                         </nav>
                     </ul>
                     <!-- <li class='icon'><a href='mailto:jake.mattless@gmail.com'>@</a></li> -->
                 </ul>
         </header>
-        <div class='spacer'></div>
         <article>
-            <section id='title'>
-                <div class='intro'>Hello There</div>
-            </section>
-            <hr />
             <section class='content'>
-                <h2>Header title</h2>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus eu cursus nisl. Nullam gravida est ac euismod tristique. Vestibulum iaculis risus malesuada enim eleifend vulputate. Vestibulum sollicitudin magna at purus dictum, ut sagittis felis fringilla. Ut sodales erat lorem. Integer semper nec metus a laoreet. Ut eu volutpat mi, eu tincidunt libero. Mauris sem mauris, tempor interdum aliquet sit amet, venenatis vel risus. Morbi ut velit justo. Suspendisse potenti.</p>
-            </section>
+                <span>
+                    <span>
+                        <h2>Who Am I?</h2>
+                        <p>Hi! I'm Jake, I'm a 19 year old studying an undergraduate degree in Software Engineering at Nottingham Trent University (NTU) I also do a bunch of random coding and things in my spare time.</p>
+                        <p>Some of my interests include playing instruments (Piano and Guitar), breaking video games, web development and coding random things.</p>
+                        <p>I've coded in Python, Java, C#, C++, Javascript, C, ARM Assembly and x86 Assembly. I also know how to use Pygame, Tkinter and Django with Python; XAML with C#, OpenGL with C++, and Node.JS and React.JS with Javascript</p>
+                        <hr />
+                        <ul class="social">
+                            <li class="button"><a href="https://github.com/JakeMattless"><img id="github-logo" src="img/GitHub-Mark-Light-64px.png" width="64px"></a></li>
+                            <li class="button"><a href="https://www.linkedin.com/in/jake-mattless-495768173/"><img id="linkedin-logo" src="img/LI-In-Bug.png" width="64px"></a></li>
+                            <li class="button"><a href="https://twitter.com/JakeMattless"><img id="twitter-logo" src="img/2021 Twitter logo - white.png" width="64px"></a></li>
+                        </ul>
+                    </span>
+                        <img alt="A picture of me" id="portrait" src="./img/me.jpg">
+                </span>
+                </section>
         </article>
+
+        <script src="./main.js"></script>
     <body>
 </html>

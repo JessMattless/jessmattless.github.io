@@ -36,25 +36,57 @@ p {
 .link {
     color: var(--lightText);
     font-family: var(--bodyFont);
-    flex: 0 1 25%;
+    flex: 0 1 50%;
     text-align: center;
     font-size: 1em;
 }
 
-.link a {
+.pageLink, .active {
     display: inline-block;
     height: 50px;
     width: 90%;
-    margin: 5% 5px;
+    margin: 5px 5px;
     line-height: 50px;
     text-decoration: none;
     color: var(--lightText);
-    border-radius: 10px;
-    transition-duration: 0.2s;
+    letter-spacing: 0;
+    transition: 320ms ease-in-out;
 }
 
-.link a:hover {
-    background: #00000080;
+.pageLink:hover, .pageLink:active {
+    letter-spacing : 2px;
+}
+
+.pageLink:after, .pageLink:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+
+.pageLink:hover:after, .pageLink:hover:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+.pageLink:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+}
+
+.active {
+    letter-spacing : 2px !important; 
+    outline: 2px solid #fff;
 }
 
 .headerImg {
@@ -119,11 +151,12 @@ p {
 }
 
 hr {
-    margin: 0;
+    margin: 0 30px;
 }
 
 .content {
-    margin: 40px 10%;
+    margin: 120px 10%;
+    padding: 0 7em;
 }
 
 .content h2 {
@@ -131,6 +164,69 @@ hr {
     margin: 0 20px;
 }
 
-.content p {
-    text-align: justify;
+.content > span {
+    display: flex;
+    flex-direction: row;
+}
+
+#portrait {
+    width: 400px;
+    height: 400px;
+    margin: 30px 10px 30px 50px;
+    border-radius: 50%;
+    box-shadow: 8px 8px 10px 2px #000000;
+    -webkit-box-shadow: 8px 8px 10px 2px #000000; 
+}
+
+.social {
+    color: var(--lightText);
+    list-style: none;
+    font-family:  var(--headerFont);
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.button {
+    padding: 15px;
+    border-radius: 50%;
+    transition-duration: 380ms;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+}
+
+.button::before, .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 380ms ease-in-out;
+    border-radius: 50%;
+}
+
+.button img {
+    position: relative;
+    transition-duration: 380ms;
+    z-index: 1;
+}
+
+.button:hover img {
+    filter: brightness(8%);
+}
+
+.button::after {
+    box-shadow: inset 0 0 0 1px var(--lightText);
+}
+
+.button::before {
+    background: var(--lightText);
+    box-shadow: inset 0 0 0 60px var(--darkColor);
+}
+
+.button:hover::before {
+    box-shadow: inset 0 0 0 1px var(--darkColor);
 }
