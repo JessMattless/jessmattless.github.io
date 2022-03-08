@@ -148,6 +148,7 @@ p {
     position: absolute;
     color: var(--lightText);
     font-family: var(--headerFont);
+    line-height: 70px;
 }
 
 hr {
