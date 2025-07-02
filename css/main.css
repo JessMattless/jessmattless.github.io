@@ -128,7 +128,7 @@ p {
 }
 
 #title {
-    background: url("../img/code.png");
+    background: url("../img/code_2.png");
     background-size: cover;
     height: 400px;
     background-attachment: fixed;
@@ -138,9 +138,7 @@ p {
 }
 
 .intro {
-    font-size: 5em;
     text-align: center;
-    letter-spacing: 5px;
     margin: 0;
     padding: 50px 0;
     background-color: #00000080;
@@ -150,6 +148,15 @@ p {
     color: var(--lightText);
     font-family: var(--headerFont);
     line-height: 70px;
+}
+
+.intro h2 {
+    font-size: 5em;
+    letter-spacing: 5px;
+}
+
+.intro p {
+    font-size: 1.3em;
 }
 
 hr {
@@ -275,5 +282,30 @@ video {
 }
 
 .projectImage {
-    width: 100%;
+    width: 80%;
+    margin: auto 10%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
 }
+
+.mobile {
+    width: 30%;
+    margin: auto 35%;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin: 120px 10%;
+        padding: 0 7em;
+    }
+    
+    .content h2 {
+        font-size: 3em;
+        margin: 0 20px;
+    }
+    
+    .content > div {
+        display: flex;
+        flex-direction: row;
+    }
+  }
